@@ -1,0 +1,25 @@
+- hosts: all
+  become: yes 
+  tasks:
+
+
+  - name: port change in httpd
+    lineinfile:
+     path: /etc/httpd/conf/httpd.conf
+     regexp: '^Listen '
+     insertafter: '^#Listen '
+     line: 'Listen 80'
+    notify: restart httpd
+ 
+  handlers:
+  - name: restart httpd
+    service:
+     name: httpd
+     state: restarted
+    notify: message
+   
+  - name: message
+    debug:
+      msg: changes done on the server  
+
+    

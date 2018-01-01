@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+  
+  - name: shell module
+    shell: echo "this is test"  >> /home/ec2-user/test.txt
+ 

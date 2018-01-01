@@ -1,0 +1,23 @@
+- hosts: all
+  tasks:
+  
+
+  - name: checking package
+    yum:
+     list=httpd
+    register: pkg
+    
+  - name: list  
+    debug:
+     msg: "{{pkg}}"
+ 
+  - name: second
+    debug: 
+     msg: "hello" 
+    when: pkg.results[1].yumstate == 'installed'
+ 
+  - name: remove
+    package:
+     name: httpd
+     state: absent
+    when: pkg.results[1].yumstate == 'installed'  

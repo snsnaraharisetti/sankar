@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes       
+  tasks:
+  
+  - name: include module
+    include: include1.yml
+    include: include2.yml 
+

@@ -1,0 +1,12 @@
+- hosts: all
+  vars_prompt:
+    name: firstname
+    prompt: Enter your first name
+    private: no
+  tasks:
+  - name: prnting run time variables
+    debug:
+     msg: "Hello this is my first name {{firstname}}" 
+
+
+

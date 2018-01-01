@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+  
+  - name: useradd
+    user:
+     name: nagu
+     shell: /bin/bash
+ 

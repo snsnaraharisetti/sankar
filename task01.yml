@@ -1,0 +1,21 @@
+- name: task1
+  hosts: all
+  tasks:
+   - name: service httpd remove
+     package: 
+       name: httpd
+       state: absent
+     tags: httpdremove
+   
+   - name: httpd installation
+     package: 
+        name: httpd
+        state: latest
+     tags: httpdinstallation
+- name: task2
+  hosts: all
+  tasks:
+    - name: prinit message
+      debug:
+       msg: hello this is task2
+

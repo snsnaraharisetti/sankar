@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+  
+  - name: testing
+    set_fact:
+     firstname: sankar
+     lastname: srinivas
+  - name: printing vars
+    debug:
+     msg: "{{firstname}} {{lastname}}"  

@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+  
+  - name: download file from internet
+    get_url:
+     url: https://raw.githubusercontent.com/carreerit/gripus/master/ansible/playbooks/01-ping.yml
+     dest: /home/ec2-user/ 

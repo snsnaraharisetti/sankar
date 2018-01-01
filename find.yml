@@ -1,0 +1,18 @@
+- hosts: all
+  tasks:
+ 
+  - name: find
+    find:
+     paths: /home/ec2-user/tejasvi
+     patterns: '*.html'
+    register: out
+
+  - name: out
+    debug:
+     msg: "{{out}}"
+
+  - name: deleting files
+    file:
+     path: "{{item.path}}"
+     state: absent
+    with_items: "{{out.files}}" 

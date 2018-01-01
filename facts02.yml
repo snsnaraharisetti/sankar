@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+
+  - name: testing local facts
+    debug:
+     msg: "{{ansible_local.sample.ENV}}"      

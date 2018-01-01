@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes 
+  tasks:
+
+  - name: file
+    file:
+     path: /var/www/html/index.html
+     state: touch
+       
