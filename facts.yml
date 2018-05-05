@@ -1,6 +1,0 @@
-- hosts: all
-  tasks:
-
-  - name: facts
-    debug:
-     msg: "hello my os version is {{ansible_distribution}}"

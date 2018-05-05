@@ -1,4 +1,0 @@
-HTTPD_VARS:
-  - httpd
-  - httpd-devel
-

@@ -1,9 +1,0 @@
-- hosts: all
-  tasks:
- 
-
-  - name: directory creation
-    file:
-     path: /home/ec2-user/tejasvi/
-     state: absent
-    

@@ -1,8 +1,0 @@
-- hosts: all
-  tasks:
-  - name: this is variable
-    shell: ls /
-    register: var
-  - name: priniting varaible
-    debug:
-     msg: "{{var}}" 

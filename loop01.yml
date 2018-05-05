@@ -1,8 +1,0 @@
-- hosts: all
-  tasks:
-  - name: loops
-    debug:
-     msg: "{{item}}"
-    with_items:
-      - nagu
-      - sankar  

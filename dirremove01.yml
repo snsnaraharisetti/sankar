@@ -1,6 +1,0 @@
-- hosts: all
-  tasks:
-   
-  - name: file and folders delete in folders
-    shell: rm -rf /home/ec2-user/tejasvi/*
-

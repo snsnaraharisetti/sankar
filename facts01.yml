@@ -1,6 +1,0 @@
-- hosts: all
-  tasks:
-  
-  - name: checking ip
-    debug:
-      msg: "this is my ip {{ansible_all_ipv4_addresses}}" 
